@@ -1,0 +1,184 @@
+Main.tex 
+\documentclass{article} 
+\usepackage{graphicx} % Required for inserting images 
+\begin{document} 
+\begin{center} 
+\Large{\textbf{References Demo}} 
+\end{center} 
+\section{Introduction} 
+%\section{Related Work} 
+For disaster management, uncertainty handling is the main key problem. But, in Joint Service 
+deployment and Requests Allocation~(JSR) domain, research work mainly uses the approaches 
+such as deterministic optimization \cite{hardtoshare, multicell, bandwidth}, Lyapunov 
+optimization \cite{dataintensive}, stochastic optimization, replication of services to achieve high 
+reliability, and forecasting of user requests using machine learning without considering 
+uncertainty. In deterministic optimization \cite{edgeuav}, request demand is known before the 
+run. However, in online optimization, time is divided into slots and performs optimization per slot 
+basis, which does not consider uncertain demand. Even if we used any probability distribution to 
+model demand, it does not provide the correct model/pattern to define the uncertain data 
+\cite{edgeuncertainty}. Using a replication approach to achieve high availability also incurs extra 
+resource cost \cite{robust}. Using the forecasting method also, we can not predict the impact of 
+uncertain events on the requests, which may lead to under-provisioning/over-provisioning 
+resources to process the required tasks \cite{rsome}. 
+\section{Experiment Setup and Performance Parameters} 
+  
+To demonstrate the efficiency of the proposed approaches, we will simulate the scenario for an 
+urban site affected by any natural calamity \cite{oilindustry}. To implement optimization models, 
+we will use the IBM Cplex Optimizer tool \cite{cplex}. 
+\bibliographystyle{IEEEtran} 
+\bibliography{ref} 
+\end{document} 
+ref.bib 
+@ARTICLE{oilindustry,   
+author={Ngoenriang, Napat and Turner, Stephen John and Niyato, Dusit and Supittayapornpong, 
+Sucha},   
+journal={IEEE Internet of Things Journal}, 
+title={Joint UAV-Placement and Data Delivery in Aerial Inspection under Uncertainties}, 
+year={2021}, 
+volume={}, 
+number={}, 
+pages={1-1}, 
+doi={10.1109/JIOT.2021.3113713}} 
+@ARTICLE{uavservice, 
+author={Qu, Yuben and Dai, Haipeng and Wang, Haichao and Dong, Chao and Wu, Fan and 
+Guo, Song and Wu, Qihui},  journal={IEEE Journal on Selected Areas in Communications}, 
+title={Service Provisioning for UAV-Enabled Mobile Edge Computing}, 
+year={2021}, 
+volume={39}, 
+number={11},  
+  
+pages={3287-3305}, 
+doi={10.1109/JSAC.2021.3088660} 
+} 
+@misc{cplex, 
+author = {IBM}, 
+title = {IBM CPLEX Optimizer}, 
+howpublished = "\url{https://www.ibm.com/in-en/analytics/cplex-optimizer}", 
+year = {2021},  
+note = "[Online; accessed 3-Feb-2022]" 
+} 
+@misc{rsome, 
+author = {NSU}, 
+title = {RSOME}, 
+howpublished = "\url{https://xiongpengnus.github.io/rsome/}", 
+year = {2021},  
+note = "[Online; accessed 3-Feb-2022]" 
+} 
+@INPROCEEDINGS{hardtoshare, 
+author={He, Ting and Khamfroush, Hana and Wang, Shiqiang and La Porta, Tom and Stein, 
+Sebastian}, 
+booktitle={IEEE 38th International Conference on Distributed Computing Systems (ICDCS)}, 
+title={It's Hard to Share: Joint Service Placement and Request Scheduling in Edge Clouds with 
+Sharable and Non-Sharable Resources},      year={2018}, 
+  
+volume={}, 
+number={}, 
+pages={365-375}, 
+doi={10.1109/ICDCS.2018.00044} 
+} 
+@INPROCEEDINGS{multicell, 
+author={Poularakis, Konstantinos and Llorca, Jaime and Tulino, Antonia M. and Taylor, Ian 
+and Tassiulas, Leandros}, 
+booktitle={IEEE Conference on Computer Communications (INFOCOM)}, 
+title={Joint Service Placement and Request Routing in Multi-cell Mobile Edge Computing 
+Networks}, 
+year={2019}, 
+volume={}, 
+number={}, 
+pages={10-18}, 
+doi={10.1109/INFOCOM.2019.8737385} 
+} 
+@ARTICLE{bandwidth, 
+author={Poularakis, Konstantinos and Llorca, Jaime and Tulino, Antonia M. and Taylor, Ian}, 
+journal={IEEE/ACM Transactions on Networking}, 
+title={Service Placement and Request Routing in MEC Networks With Storage, Computation, 
+and Communication Constraints}, 
+year={2020}, 
+  
+volume={28}, 
+number={3}, 
+pages={1047-1060}, 
+doi={10.1109/TNET.2020.2980175} 
+} 
+@INPROCEEDINGS{dataintensive, 
+author={Farhadi, Vajiheh and Mehmeti, Fidan and He, Ting and Porta, Tom La and 
+Khamfroush, Hana and Wang, Shiqiang and Chan, Kevin S},        
+booktitle={IEEE Conference on Computer Communications(INFOCOM)}, 
+title={Service Placement and Request Scheduling for Data-intensive Applications in Edge 
+Clouds}, 
+year={2019}, 
+volume={}, 
+number={}, 
+pages={1279-1287}, 
+doi={10.1109/INFOCOM.2019.8737368} 
+} 
+@ARTICLE{resource, 
+author={Ahmed, Shakil and Chowdhury, Mostafa Zaman and Sabuj, Saifur Rahman and Alam, 
+Md Imtiajul and Jang, Yeong Min},  journal={IEEE Access},   title={Energy-Efficient UAV 
+Relaying Robust Resource Allocation in Uncertain Adversarial Networks},   
+year={2021},  
+volume={9},  number={},  pages={59920-59934},  doi={10.1109/ACCESS.2021.3073015}} 
+@ARTICLE{resource2,  author={Yang, Zhaohui and Pan, Cunhua and Wang, Kezhi and Shikh
+Bahaei, Mohammad},  
+journal={IEEE Transactions on Wireless Communications},   
+title={Energy Efficient Resource Allocation in UAV-Enabled Mobile Edge Computing 
+  
+Networks},   
+year={2019},  
+doi={10.1109/TWC.2019.2927313}} 
+volume={18},  
+number={9},  
+pages={4576-4589},  
+@ARTICLE{offload,  author={Apostolopoulos, Pavlos Athanasios and Fragkos, Georgios and 
+Tsiropoulou, Eirini Eleni and Papavassiliou, Symeon},  journal={IEEE Transactions on Mobile 
+Computing},   title={Data Offloading in UAV-assisted Multi-access Edge Computing Systems 
+under Resource Uncertainty},   
+year={2021},  
+doi={10.1109/TMC.2021.3069911}} 
+volume={},  
+number={},  
+pages={1-1},  
+@INPROCEEDINGS{offload2,  author={Zhou, Fuhui and Wu, Yongpeng and Sun, Haijian and 
+Chu, Zheng},  booktitle={2018 IEEE International Conference on Communications (ICC)},   
+title={UAV-Enabled Mobile Edge Computing: Offloading Optimization and Trajectory Design},   
+year={2018},  volume={},  number={},  pages={1-6},  doi={10.1109/ICC.2018.8422277}} 
+@ARTICLE{trajectory,  author={Wang, Kai and Zhang, Xiao and Duan, Lingjie and Tie, Jun},  
+journal={IEEE Transactions on Mobile Computing},   title={Multi-UAV Cooperative Trajectory 
+for Servicing Dynamic Demands and Charging Battery},   
+year={2021},  
+number={},  pages={1-1},  doi={10.1109/TMC.2021.3110299}} 
+@article{edgeuncertainty, 
+volume={},  
+author = {Xu, Xiaolong and Cao, Hao and Geng, Qingfan and Liu, Xihua and Dai, Fei and 
+Wang, Chuanjian}, 
+title = {Dynamic resource provisioning for workflow scheduling under uncertainty in edge 
+computing environment}, 
+journal = {Concurrency and Computation: Practice and Experience}, 
+volume = {n/a}, 
+number = {n/a}, 
+pages = {e5674}, 
+keywords = {edge computing, SDN, uncertainty, workflow scheduling}, 
+doi = {https://doi.org/10.1002/cpe.5674} 
+} 
+ 
+@ARTICLE{edgeuav,  author={Qu, Yuben and Dai, Haipeng and Wang, Haichao and Dong, 
+Chao and Wu, Fan and Guo, Song and Wu, Qihui},  journal={IEEE Journal on Selected Areas in 
+Communications},   
+title={Service Provisioning for UAV-Enabled Mobile Edge Computing},   
+year={2021},  
+volume={39},  
+doi={10.1109/JSAC.2021.3088660}} 
+@inproceedings{mobility, 
+number={11},  
+pages={3287-3305},  
+title={UAV 3D Mobility Model Oriented to Dynamic and Uncertain Environment}, 
+author={Na Wang and Nan Di and Fei Dai and Fangxin Liu}, 
+booktitle={ICA3PP}, 
+year={2018} 
+} 
+@ARTICLE{robust,  author={Li, Bo and He, Qiang and Cui, Guangming and Xia, Xiaoyu and 
+Chen, Feifei and Jin, Hai and Yang, Yun},  journal={IEEE Transactions on Services Computing},   
+title={READ: Robustness-oriented Edge Application Deployment in Edge Computing 
+Environment},   
+year={2020},  
+doi={10.1109/TSC.2020.3015316}} 
